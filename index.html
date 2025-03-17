@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="English_Janala_Tonoy" />
+    <meta
+      property="og:description"
+      content="Learn English in the easiest way"
+    />
+    <meta property="og:image" content="https://i.imgur.com/vRJlmNy.jpeg" />
+    <meta
+      property="og:url"
+      content="https://english-janala-tonoy.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala</title>
+   
+   
+    <!-- tailwind and daisy ui CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/6f086dc852.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      section {
+        scroll-margin-top: 80px;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      .font-hind {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+      .active {
+        background-color: #4f46e5;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="font-poppins">
+    <!-- navbar -->
+    <nav id="nav" class="pb-10 hidden">
+      <div
+        class="navbar border-b-2 border-slate-300 bg-gradient-to-r from-white via-indigo-50 to-white shadow-sm fixed w-full top-0 z-50"
+      >
+        <div class="navbar-start">
+          <!-- 3dot menu -->
+          <div>
+            <ul
+              class="dropdown menu w-32 rounded-box bg-base-100 shadow-sm space-y-2"
+              popover
+              id="popover-1"
+              style="position-anchor: --anchor-1"
+            >
+              <li>
+                <a
+                  href="#faq"
+                  class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                  >FAQ <i class="fa-solid fa-circle-question"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#lesson-section"
+                  class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                  >Learn <i class="fa-solid fa-book-open"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  id="logout-btn"
+                  onclick="logout()"
+                  class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                >
+                  Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn btn-ghost text-2xl">
+            English <span><img src="./assets/logo.png" alt="" /></span> জানালা
+          </div>
+        </div>
+
+        <div class="navbar-end hidden lg:flex space-x-4 px-5">
+          <a
+            href="#faq"
+            class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+            >FAQ <i class="fa-solid fa-circle-question"></i>
+          </a>
+          <a
+            href="#lesson-section"
+            class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+            >Learn <i class="fa-solid fa-book-open"></i>
+          </a>
+          <a
+            id="logout-btn"
+            onclick="logout()"
+            class="btn text-indigo-600 hover:bg-indigo-600 hover:text-white"
+          >
+            Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section -->
+    <section id="hero-section" class="hero mb-20 bg-base-200 min-h-screen">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img
+          src="./assets/hero-student.png"
+          class="lg:max-w-lg max-w-xs rounded-lg"
+        />
+        <div>
+          <h1 class="text-6xl text-center lg:text-left font-bold">
+            <span class="text-sky-400"> English </span> is Easy!!
+          </h1>
+          <p class="py-6 font-hind text-2xl text-gray-500">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+          <input
+            id="name-box"
+            value="RISHAD"
+            type="text"
+            placeholder="Enter Your Name"
+            class="input block mb-3"
+          />
+          <input
+            id="password-box"
+            value="123456"
+            type="password"
+            placeholder="Enter Password (123456)"
+            class="input block mb-3"
+          />
+          <button id="get-started-btn" class="btn btn-primary">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- learn lesson section -->
+    <section id="lesson-section" class="lg:mb-40 my-10 hidden">
+      <h1 class="text-4xl text-center font-bold py-10">
+        <span class="text-sky-400"> Let's </span>Learn Vocabularies
+      </h1>
+      <!-- buttons -->
+      <div
+        id="lesson-btn-container"
+        class="flex justify-center gap-4 flex-wrap mb-5 mx-3"
+      ></div>
+      <!-- loader -->
+      <div id="loader" class=" justify-center hidden">
+        <span class="loading loading-bars loading-xl"></span>
+      </div>
+
+      <!-- grid -->
+      <div
+        id="grid-container"
+        class="bg-slate-50 grid lg:grid-cols-3 grid-cols-1 gap-6 mx-auto w-10/12 p-6 rounded-xl"
+      >
+        <div
+          class="mx-auto w-10/12 rounded-4xl text-center space-y-3 flex flex-col items-center col-span-3"
+        >
+          <p class="font-hind text-xs lg:text-lg">
+            আপনি কোন lesson select করেন নাই
+
+          </p>
+          <h1 class="text-4xl font-semibold font-hind">
+            একটি Lesson Select করুন।
+          </h1>
+        </div>
+      </div>
+      <!-- grid end -->
+    </section>
+
+    <!-- FAQ accordian -->
+    <section id="faq" class="w-10/12 mx-auto my-20 hidden">
+      <h1 class="text-4xl text-center font-bold py-7">
+        <span class="text-sky-400"> Frequently </span>Asked Questions
+      </h1>
+      <div class="space-y-4">
+        <div
+          class="bg-slate-100 collapse collapse-plus bg-base-100 border border-base-300"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+           1. How can I start learning English on this website?
+          </div>
+          <div class="collapse-content text-sm">
+            You can start learning English by asking me anything related to grammar, vocabulary, pronunciation, or even practicing conversations
+          </div>
+        </div>
+        <div
+          class="bg-slate-100 collapse collapse-plus bg-base-100 border border-base-300"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            2.Is this website free to use?
+          </div>
+          <div class="collapse-content text-sm">
+            Yes, using this website to chat with me is free
+          </div>
+        </div>
+        <div
+          class="bg-slate-100 collapse collapse-plus bg-base-100 border border-base-300"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            3.  Do I need to create an account?
+          </div>
+          <div class="collapse-content text-sm">
+            Yes, You can create an account
+          </div>
+        </div>
+        <div
+          class="bg-slate-100 collapse collapse-plus bg-base-100 border border-base-300"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            4.How JavaScript Promises work?
+          </div>
+          <div class="bg-slate-100 collapse-content text-sm">
+            Handle asynchronous operations using .then(), .catch(), and
+            .finally().
+          </div>
+        </div>
+        <div
+          class="bg-slate-100 collapse collapse-plus bg-base-100 border border-base-300"
+        >
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            5. How can I build my English vocabulary?
+          </div>
+          <div class="bg-slate-100 collapse-content text-sm">
+            Building your English vocabulary takes practice, but here are some effective ways to do it:
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer
+      class="bg-gray-300  footer lg:px-20 flex justify-between items-center flex-wrap sm:footer-horizontal text-black text-neutral-content p-10"
+    >
+      <aside class="order-2 lg:order-1">
+        <div class="flex font-bold items-center text-2xl">
+          English <span><img src="./assets/logo.png" alt="" /></span> জানালা
+        </div>
+        <p class="">
+          <span class="font-hind font-semibold text-xl">ইংরেজি শিখুন সহজে</span>
+          <br>Providing ED-Tech Applications since 2025
+          <br />
+          Developed by RISHAD AHAMMED
+        </p>
+      </aside>
+      <nav class="order-1 lg:order-2">
+        <h6 class=" font-bold text-xl text-black">FOLLW US</h6>
+        <div class="grid grid-flow-col gap-4 text-2xl cursor-pointer">
+         
+          <img src="assets/github-thumb.png" alt=""> 
+         <img src="assets/fb-thumb.png" alt="">
+         <img src="assets/instagram-thumb.png" alt="">
+        </div>
+      </nav>
+    </footer>
+
+    <!-- log in modal -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box flex flex-col items-center">
+        <div class="mb-10">
+          <i class="fa-solid fa-circle-check text-8xl text-indigo-600"></i>
+        </div>
+        <h3 class="text-3xl font-bold">Congratulations</h3>
+        <p id="modal-user" class="py-2 font-hind text-xl"></p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn bg-sky-400 text-white hover:bg-indigo-600">
+              Let's Go
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- word details modal -->
+    <dialog id="my_modal_2" class="modal"></dialog>
+    <script src="script/main.js"></script>
+  </body>
+</html>
